@@ -1,0 +1,117 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-menu {
+  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+  padding: 30px;
+  transition: all .4s;
+}
+
+.menu-item {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: white;
+  transition: color .8s;
+}
+
+.line1, .line2, .line3 {  /*This creates the three lines of the hamburger icon */
+  width: 23px;
+  height: 3px;
+  margin: 5px;
+}
+
+/*To converte the hamburger button's three lines to two line cross button 
+ .change applies all three line changes to the button element. We will use Jquery to 
+  apply .change class to the button once the user clicks on the hamburger button*/
+.change .line1  { 
+  transform: rotate(-45deg) translate(-5px, 6px);
+  transition: all .4s;
+}
+.change .line2 {
+  opacity: 0;
+}
+.change .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+  transition: all .4s;
+}
+
+/* Apply the following to the nav tag once the scroll value reaches 200 and above.*/
+.nav-scroll {
+  padding: 4px 30px; /*Reduce the top/bottom padding to 4px. Leave the left/right padding as 30px. */
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.7));
+  transition: all .4s;
+}
+
+header {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.5)), url(images/header-img.jpeg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover; /*fills the image to entire size of the window and makes the image responsive*/
+}
+
+.banner {
+  position: absolute; /*makes the element to jump out of the normal flow of elements*/
+
+  /*The following is a technique to position an absolute element perfecetly center of the page*/
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* moves the element slightly to the right*/
+  /*End of centering the element*/
+}
+
+.banner-head{
+  animation-name: anim;
+  animation-duration: 2s;
+}
+.banner-para{
+  animation-name: anim;
+  animation-duration: 2s;
+  animation-delay: .5s; /*makes the paragraph animation start .5sec after the header animation*/
+  animation-fill-mode: backwards; /*since the animation starts .5s late, the content appear for .5s. This makes the content to not show till animation begins*/
+}
+
+@keyframes anim {
+  0% { /* starting point */
+    transform: translateX(-100px);
+    opacity: 0; /*hides the element */
+  }
+  100% { /* end point*/
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
