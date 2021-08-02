@@ -1,0 +1,114 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-menu {
+  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+  padding: 30px;
+  transition: all .4s;
+}
+
+.menu-item {
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  color: white;
+  transition: color .8s;
+}
+
+/*To create the three lines of the hamburger icon */
+.line1, .line2, .line3 { 
+  width: 23px;
+  height: 3px;
+  margin: 5px;
+}
+
+/*To converte the hamburger button's three lines to two line cross button */
+.change .line1  { 
+  transform: rotate(-45deg) translate(-5px, 6px);
+  transition: all .4s;
+}
+.change .line2 {
+  opacity: 0;
+}
+.change .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+  transition: all .4s;
+}
+
+/* Apply the following to the nav tag once the scroll value reaches 200 and above.*/
+.nav-scroll {
+  /*Reduce the top/bottom padding to 0px. Leave the left/right padding as 30px */
+  padding: 0px 30px; 
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.7));
+  transition: all .4s;
+}
+
+.header--container {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.5)), url(images/header-main.jpg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover; 
+}
+
+.banner--photo {
+  margin: 15% 20%;
+  animation-name: anim;
+  animation-duration: 2s;
+  max-width: 50%;
+  min-width: 40%;
+  box-shadow: 3px 6px 15px #111;
+}
+
+.banner--text{
+  animation-name: anim;
+  animation-duration: 2s;
+  animation-delay: .7s; 
+  animation-fill-mode: backwards; 
+}
+
+@keyframes anim {
+  0% { /* starting point */
+    transform: translateX(-100px);
+    opacity: 0; /*hides the element */
+  }
+  100% { /* end point*/
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.img--about {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.img--card {
+  width: 70%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
