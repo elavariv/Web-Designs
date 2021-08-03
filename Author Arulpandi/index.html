@@ -1,89 +1,192 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="images/title-img.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Arulpandi</title>
+</head>
+<body>
+  
+  <!-- Header contains the background image and navbar-->
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top nav-menu">
+    <!-- navbar brand begin -->
+    <a href="#" class="navbar-brand text-light">
+      <span class="h2 font-weight-bold">A</span>RULPANDI <span class="h2 font-weight-bold">P</span>
+    </a>
+    <!-- navbar brand end -->
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.8.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.8.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.8.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.8.1/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.8.1/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.8.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.8.1/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.8.1/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.8.1/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.8.1/firebase-performance.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <!-- hamburger menu button begin -->
+    <button type="button" class="navbar-toggler nav-button" data-toggle="collapse" data-target="#myNavbar" >
+      <div class="bg-light line1"></div>
+      <div class="bg-light line2"></div>
+      <div class="bg-light line3"></div>
+    </button>
+    <!-- End of hamburger menu  -->
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <!-- Navbar menu items -->
+    <div class="collapse navbar-collapse justify-content-end font-weight-bold text-uppercase" id="myNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="#home" class="nav-link m-2 menu-item">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#books" class="nav-link m-2 menu-item">Books</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link m-2 menu-item">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#reviews" class="nav-link m-2 menu-item">Reviews</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link m-2 menu-item">Contact</a>
+        </li>
+      </ul>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <!-- End of Navbar menu items -->
+  </nav>
+  <!-- end of navbar  -->
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+  <div class="container-fluid" id="home">
+    <div class="row header--container">
+      <div class="col-md-6 text-md-right text-center align-self-md-center align-self-end text-light">
+        <img class="banner--photo" src="images/business.jpeg">            
+      </div>
+      <div class="col-md-6 text-md-left text-center align-self-md-center align-self-start text-light">
+          <h1 class="display-5 banner--text">I'll teach you to trade like a <span class="display-4">Pro</span></h1>
+      </div>
+    </div>
+  </div>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+  <section>
+    <div class="container-fluid" style="background-color: rgb(244,245,246);" id="books">
+      <div class="row p-5">
+        <div class="col">
+          <p class="display-4 text-center">Books by Arulpandi</p>
+        </div>
+      </div>
+      <div class="row pb-5">
+        <div class="col-md-6 pb-5">
+          <div class="card w-75 m-auto">
+            <img class= "card-img-top" src="images/book1.jpeg"  alt="book 1">
+            <div class="card-body text-center">
+              <p class="card-text">A definitive book on learning advanced concepts about day trading</p>
+              <a href="https://www.amazon.com/Day-Trading-Techniques-Without-Technicalities-ebook/dp/B08BS3DQZN/ref=sr_1_4?dchild=1&qid=1627945131&sr=8-4" class="btn btn-primary">Buy from Amazon</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card w-75 m-auto">
+            <img class= "card-img-top" src="images/book2.jpeg" alt="book 1">
+            <div class="card-body text-center">
+              <p class="card-text">Learn candlestick patterns in less than 100 pages and trade with confidence</p>
+              <a href="https://www.amazon.com/gp/product/B08TJ3BPJZ/ref=dbs_a_def_rwt_hsch_vapi_tkin_p1_i0" class="btn btn-primary">Buy from Amazon</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>  
+</section>
+
+<section>
+  <div class="container" id="about">
+    <div class="row">
+      <div class="col m-3">
+        <h1 class="display-4 text-center">About Arulpandi</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 m-auto">
+        <img src="images/solo2.JPG" class="img--about w-md-75 p-3">
+      </div>
+      <div class="col-md-8 p-5 text-md-left text-center">
+        <p class="lead">Arulpandi is a retired executive of a bank owned by the Government of India. He has been into stock trading for more than
+          three decades. He is highly skilled at financial asset trading. He is passionate about sharing his knowledge. He has written two books on 
+          trading which received encomiums from traders, authors and scholars in the trading field.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container-fluid" id="reviews">
+    <div class="row bg-warning">
+      <div class="col">
+        <h1 class="display-4 text-muted text-center m-5">Amazon review</h1>
+        <p class="h4 p-2">Finally!! An excellent book</p>
+        <p class="p-2 text-center"><em>"Thank you, Arulpandi. This book really made me undertand the physcology and interpretation of candlestick patterns."</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <p class="h3 text-center m-3">Contact</p>
+  <div class="text-center mb-3">
+    Mail | Facebook | Twitter
+  </div>
+</footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
